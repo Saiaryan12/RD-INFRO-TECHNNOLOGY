@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 
 class DashboardActivity : AppCompatActivity() {
@@ -12,14 +14,18 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-        val logoutBtn = findViewById<Button>(R.id.btnLogout)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
-        logoutBtn.setOnClickListener {
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-            FirebaseAuth.getInstance().signOut()
+        val newsList = listOf(
+            News("Android 15 Released", "Google officially released Android 15."),
+            News("Firebase Authentication", "Learn Firebase login system in Android."),
+            News("Jetpack Compose", "Modern UI toolkit for Android development."),
+            News("Kotlin for Android", "Kotlin is now the preferred Android language."),
+            News("RecyclerView", "RecyclerView efficiently displays large data sets.")
+        )
 
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
+        recyclerView.adapter = NewsAdapter(newsList)
     }
 }
