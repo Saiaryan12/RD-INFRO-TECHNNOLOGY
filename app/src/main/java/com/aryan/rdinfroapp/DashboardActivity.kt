@@ -10,6 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import android.content.Intent
 import android.widget.Button
+import com.google.firebase.messaging.FirebaseMessaging
 class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,6 +35,14 @@ class DashboardActivity : AppCompatActivity() {
         )
 
         recyclerView.adapter = PostAdapter(posts)
+
+        FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val token = task.result
+                Toast.makeText(this, "FCM Token generated", Toast.LENGTH_SHORT).show()
+                println("FCM Token: $token")
+            }
+        }
     }
 }
 
