@@ -277,3 +277,56 @@ https://jsonplaceholder.typicode.com/posts
 * Improved RecyclerView Integration Skills
 * Learned Network Error Handling
 * Understood Client-Server Communication
+
+## Task 6 Completed
+
+### Profile Screen with Image Picker
+
+Implemented a user profile screen with image selection functionality in Android application.
+
+### Features Implemented
+
+- Profile Screen UI
+- Image Picker Integration
+- Gallery Image Selection
+- Dynamic Profile Image Preview
+- Dashboard to Profile Navigation
+- Button Click Navigation
+- Modern Dark UI Design
+- Activity Navigation using Intent
+
+### Components Created
+
+- ProfileActivity
+- activity_profile.xml
+- Profile ImageView
+- Choose Image Button
+- Image Picker Logic
+
+### Functionalities
+
+- Open Profile Screen
+- Select Image from Gallery
+- Display Selected Image
+- Navigate between Activities
+- Dynamic UI Updates
+
+### Technologies Used
+
+- Kotlin
+- Android Studio
+- ImageView
+- Intent Navigation
+- Activity Result API
+- XML Layout Design
+- RecyclerView
+- Git & GitHub
+
+### Learning Outcomes
+
+- Learned Activity Navigation
+- Implemented Image Picker
+- Understood Gallery Access
+- Used ActivityResultContracts
+- Improved Android UI Skills
+- Learned Dynamic Image Handling
