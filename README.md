@@ -46,3 +46,30 @@ Android Development Internship Tasks
 * XML Layout Design
 * Git & GitHub
 
+## Task 3 Completed
+
+### Firebase Integration Setup
+
+* Firebase Project Created
+* Android App Registered in Firebase
+* google-services.json Added
+* Firebase SDK Configured
+* Firebase Authentication Dependency Added
+* Gradle Sync Completed Successfully
+* Firebase Connected with Android Studio
+
+### Technologies Used
+
+* Firebase
+* Firebase Authentication
+* Kotlin
+* Android Studio
+* Gradle
+
+### Learning Outcomes
+
+* Learned Firebase Project Configuration
+* Connected Android App with Firebase
+* Understood Firebase SDK Integration
+* Configured google-services.json
+* Added Firebase Authentication Support
