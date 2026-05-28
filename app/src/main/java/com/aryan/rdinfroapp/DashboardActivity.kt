@@ -1,12 +1,13 @@
 package com.aryan.rdinfroapp
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.auth.FirebaseAuth
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -18,14 +19,43 @@ class DashboardActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val newsList = listOf(
-            News("Android 15 Released", "Google officially released Android 15."),
-            News("Firebase Authentication", "Learn Firebase login system in Android."),
-            News("Jetpack Compose", "Modern UI toolkit for Android development."),
-            News("Kotlin for Android", "Kotlin is now the preferred Android language."),
-            News("RecyclerView", "RecyclerView efficiently displays large data sets.")
-        )
+        fetchPosts(recyclerView)
+    }
 
-        recyclerView.adapter = NewsAdapter(newsList)
+    private fun fetchPosts(recyclerView: RecyclerView) {
+
+        RetrofitClient.apiService.getPosts()
+            .enqueue(object : Callback<List<Post>> {
+
+                override fun onResponse(
+                    call: Call<List<Post>>,
+                    response: Response<List<Post>>
+                ) {
+
+                    if (response.isSuccessful) {
+
+                        val posts = response.body() ?: emptyList()
+
+                        recyclerView.adapter = PostAdapter(posts)
+
+                    } else {
+
+                        Toast.makeText(
+                            this@DashboardActivity,
+                            "Failed to load data",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+
+                override fun onFailure(call: Call<List<Post>>, t: Throwable) {
+
+                    Toast.makeText(
+                        this@DashboardActivity,
+                        "Error: ${t.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            })
     }
 }
