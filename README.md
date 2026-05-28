@@ -48,28 +48,88 @@ Android Development Internship Tasks
 
 ## Task 3 Completed
 
-### Firebase Integration Setup
+### Firebase Authentication System
 
-* Firebase Project Created
-* Android App Registered in Firebase
-* google-services.json Added
-* Firebase SDK Configured
-* Firebase Authentication Dependency Added
-* Gradle Sync Completed Successfully
-* Firebase Connected with Android Studio
+Implemented complete Firebase Authentication using Email and Password login system.
+
+### Features Implemented
+
+* Firebase Project Configuration
+* Firebase SDK Integration
+* google-services.json Setup
+* Firebase Authentication Enabled
+* Email/Password Authentication
+* User Signup Functionality
+* User Login Functionality
+* Dashboard Screen
+* Logout Functionality
+* Firebase Session Handling
+* Automatic User Login Persistence
+* Intro Screen Navigation Logic
+* Authentication Flow Management
+* Input Validation
+* Toast Messages for Authentication Status
+
+### Authentication Flow
+
+```text
+Splash Screen
+   ↓
+Intro Screens (First Time Only)
+   ↓
+Login Screen
+   ↓
+Signup Screen / Login
+   ↓
+Dashboard Screen
+```
+
+### Auto Session Handling
+
+* New users see Intro Screens
+* Logged-in users directly enter Dashboard
+* Firebase Authentication session persists after reopening app
+* Logout returns user to Login screen
+
+### Activities Created
+
+* SplashActivity
+* IntroActivity
+* LoginActivity
+* SignupActivity
+* DashboardActivity
+
+### UI Screens Developed
+
+* Login Screen UI
+* Signup Screen UI
+* Dashboard UI
+* Intro Slider UI
+* Splash Screen UI
+
+### Firebase Components Used
+
+* Firebase Authentication
+* FirebaseAuth Instance
+* Email/Password Provider
+* Firebase User Session
 
 ### Technologies Used
 
-* Firebase
-* Firebase Authentication
 * Kotlin
 * Android Studio
-* Gradle
+* Firebase Authentication
+* ViewPager2
+* SharedPreferences
+* XML Layout Design
+* Git & GitHub
 
 ### Learning Outcomes
 
-* Learned Firebase Project Configuration
-* Connected Android App with Firebase
-* Understood Firebase SDK Integration
-* Configured google-services.json
-* Added Firebase Authentication Support
+* Learned Firebase Android Integration
+* Implemented User Authentication System
+* Understood Firebase Session Management
+* Built Login and Signup Flow
+* Managed App Navigation Logic
+* Implemented Persistent Login State
+* Improved Android UI Development Skills
