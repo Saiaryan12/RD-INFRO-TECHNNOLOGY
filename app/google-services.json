@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "895195262566",
+    "project_id": "rdinfoapp",
+    "storage_bucket": "rdinfoapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895195262566:android:f4acb70e8bc725b30b47a7",
+        "android_client_info": {
+          "package_name": "com.aryan.rdinfroapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYjCLtKW9HqYHjQ0Js7-YlZpHBR8WCGOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
