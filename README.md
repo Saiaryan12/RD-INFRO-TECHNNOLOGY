@@ -196,3 +196,84 @@ News Cards Displayed Dynamically
 * Managed Data Binding in RecyclerView
 * Designed Reusable Card Layouts
 * Improved Android UI Development Skills
+
+## Task 5 Completed
+
+### API Integration using Retrofit
+
+Implemented REST API integration in Android application using Retrofit and Gson Converter to fetch and display dynamic online data in RecyclerView.
+
+### Features Implemented
+
+* REST API Integration
+* Retrofit Setup
+* Gson Converter Integration
+* Internet Permission Configuration
+* Dynamic Data Fetching
+* JSON Data Parsing
+* RecyclerView API Data Display
+* API Response Handling
+* Error Handling with Toast Messages
+* Asynchronous Network Calls
+* Dynamic RecyclerView Updates
+
+### Components Created
+
+* Post Data Class
+* ApiService Interface
+* RetrofitClient Object
+* PostAdapter
+* API-based RecyclerView Integration
+
+### API Flow
+
+```text id="kjlwm1"
+REST API
+   ↓
+Retrofit Client
+   ↓
+JSON Response
+   ↓
+RecyclerView Adapter
+   ↓
+Dynamic Card Display
+```
+
+### API Used
+
+```text id="jlwm21"
+https://jsonplaceholder.typicode.com/posts
+```
+
+### Technologies Used
+
+* Kotlin
+* Android Studio
+* Retrofit
+* Gson Converter
+* RecyclerView
+* REST API
+* JSON Parsing
+* LinearLayoutManager
+* XML Layout Design
+* Git & GitHub
+
+### Networking Features
+
+* GET API Request
+* JSON Response Parsing
+* Callback Handling
+* Response Validation
+* Failure/Error Handling
+* Dynamic Content Loading
+
+### Learning Outcomes
+
+* Learned REST API Integration in Android
+* Understood Retrofit Library Usage
+* Implemented JSON Data Parsing
+* Managed Asynchronous API Calls
+* Displayed Dynamic Internet Data
+* Improved RecyclerView Integration Skills
+* Learned Network Error Handling
+* Understood Client-Server Communication
