@@ -8,54 +8,32 @@ import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-
+import android.content.Intent
+import android.widget.Button
 class DashboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
+        val btnProfile = findViewById<Button>(R.id.btnProfile)
+
+        btnProfile.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        fetchPosts(recyclerView)
-    }
+        val posts = listOf(
+            Post(1, 1, "Android Development", "Learn Android using Kotlin"),
+            Post(1, 2, "Firebase Authentication", "Implement login system using Firebase"),
+            Post(1, 3, "RecyclerView", "Display dynamic lists in Android"),
+            Post(1, 4, "Retrofit API", "Fetch online data using Retrofit"),
+            Post(1, 5, "Jetpack Compose", "Modern Android UI toolkit")
+        )
 
-    private fun fetchPosts(recyclerView: RecyclerView) {
-
-        RetrofitClient.apiService.getPosts()
-            .enqueue(object : Callback<List<Post>> {
-
-                override fun onResponse(
-                    call: Call<List<Post>>,
-                    response: Response<List<Post>>
-                ) {
-
-                    if (response.isSuccessful) {
-
-                        val posts = response.body() ?: emptyList()
-
-                        recyclerView.adapter = PostAdapter(posts)
-
-                    } else {
-
-                        Toast.makeText(
-                            this@DashboardActivity,
-                            "Failed to load data",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-
-                override fun onFailure(call: Call<List<Post>>, t: Throwable) {
-
-                    Toast.makeText(
-                        this@DashboardActivity,
-                        "Error: ${t.message}",
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
-            })
+        recyclerView.adapter = PostAdapter(posts)
     }
 }
+
