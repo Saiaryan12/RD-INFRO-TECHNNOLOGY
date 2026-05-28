@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
 
@@ -17,10 +18,16 @@ class SplashActivity : AppCompatActivity() {
             val sharedPref = getSharedPreferences("intro", MODE_PRIVATE)
             val isIntroDone = sharedPref.getBoolean("isIntroDone", false)
 
-            if (isIntroDone) {
-                startActivity(Intent(this, HomeActivity::class.java))
+            val user = FirebaseAuth.getInstance().currentUser
+
+            if (user != null) {
+                startActivity(Intent(this, DashboardActivity::class.java))
             } else {
-                startActivity(Intent(this, IntroActivity::class.java))
+                if (isIntroDone) {
+                    startActivity(Intent(this, LoginActivity::class.java))
+                } else {
+                    startActivity(Intent(this, IntroActivity::class.java))
+                }
             }
 
             finish()
