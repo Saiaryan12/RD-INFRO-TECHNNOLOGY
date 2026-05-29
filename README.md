@@ -330,3 +330,58 @@ Implemented a user profile screen with image selection functionality in Android 
 - Used ActivityResultContracts
 - Improved Android UI Skills
 - Learned Dynamic Image Handling
+
+## Task 7 Completed
+
+### Firebase Cloud Messaging (FCM) Push Notifications
+
+Implemented push notification functionality using Firebase Cloud Messaging in the Android application.
+
+### Features Implemented
+
+- Firebase Cloud Messaging Integration
+- Push Notification Support
+- FCM Token Generation
+- Notification Service Implementation
+- Real-time Notification Delivery
+- Notification Permission Handling
+- Background Notification Support
+- Firebase Console Notification Testing
+
+### Components Created
+
+- MyFirebaseMessagingService.kt
+- Notification Channel Setup
+- FCM Token Generation Logic
+- Firebase Messaging Configuration
+
+### Functionalities
+
+- Generate FCM Device Token
+- Receive Push Notifications
+- Display Notifications on Device
+- Background Notification Handling
+- Firebase Console Testing
+- Real-time Notification Alerts
+
+### Firebase Services Used
+
+- Firebase Cloud Messaging (FCM)
+- Firebase Authentication
+- Firebase SDK Integration
+
+### Technologies Used
+
+- Kotlin
+- Android Studio
+- Firebase Cloud Messaging
+- NotificationCompat
+- Firebase Console
+- Android Notifications
+- Firebase SDK
+- Git & GitHub
+
+### Permissions Added
+
+```xml
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
