@@ -381,9 +381,10 @@ Implemented push notification functionality using Firebase Cloud Messaging in th
 - Firebase SDK
 - Git & GitHub
 - ### Permissions Added
--
- ```xml
+
+```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+```
 
 # Task 8: Publish & Build APK
 
