@@ -380,11 +380,11 @@ Implemented push notification functionality using Firebase Cloud Messaging in th
 - Android Notifications
 - Firebase SDK
 - Git & GitHub
-
-- ```xml
+- ### Permissions Added
+-
+ ```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
-### Permissions Added
 # Task 8: Publish & Build APK
 
 ## Objective
