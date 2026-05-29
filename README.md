@@ -381,72 +381,52 @@ Implemented push notification functionality using Firebase Cloud Messaging in th
 - Firebase SDK
 - Git & GitHub
 
-### Permissions Added
-
-```xml
+- ```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
-## Task 8 Completed
+### Permissions Added
+# Task 8: Publish & Build APK
 
-### Publish & Build APK
+## Objective
+Generate a signed APK for deployment and distribution of the Android application.
 
-Generated a signed release APK for deployment and distribution using Android Studio.
+## Description
+In this task, a signed release APK was generated using Android Studio. A keystore was created and used to sign the application, making it ready for installation on Android devices and future deployment.
 
-### Features Implemented
+## Features Implemented
+- Created a new keystore (.jks file)
+- Configured APK signing credentials
+- Generated signed release APK
+- Built release version of the application
+- Prepared application for deployment
 
-- Signed APK Generation
-- Release Build Configuration
-- Secure Keystore Creation
-- Application Packaging
-- Production-ready APK Build
-- Deployment Preparation
-
-### Steps Performed
-
-1. Opened Build → Generate Signed Bundle / APK
-2. Selected APK option
-3. Created a new keystore (.jks)
-4. Configured key alias and passwords
-5. Selected Release build variant
-6. Generated Signed APK successfully
-7. Verified APK build output
-
-### Tools Used
-
+## Tools Used
 - Android Studio
 - Kotlin
 - Gradle
 - Android SDK
-- Keystore Management
-- Git & GitHub
 
-### Output Generated
+## Steps Performed
+1. Opened **Build → Generate Signed App Bundle / APK**
+2. Selected **APK**
+3. Created a new keystore
+4. Configured key alias and passwords
+5. Selected **Release** build variant
+6. Generated signed APK successfully
 
-- Signed Release APK
-- Release Build Variant
-- Deployment-ready Android Application
+## Output
+- Signed APK generated successfully
+- Release build ready for installation and distribution
 
-### Project Features Completed
+## Files Generated
+- `RDInfroKey.jks` (Keystore file)
+- `app-release.apk` (Signed APK)
 
-- User Authentication using Firebase
-- RecyclerView News Feed
-- Retrofit API Integration
-- Profile Screen
-- Image Picker and Glide Integration
-- Firebase Cloud Messaging (FCM)
-- Push Notifications
-- Signed APK Generation
+## Learning Outcomes
+- Learned Android application signing process
+- Understood keystore creation and management
+- Learned how to generate release APKs
+- Prepared Android application for deployment
 
-### Learning Outcomes
-
-- Learned Android App Signing Process
-- Understood Keystore Creation and Management
-- Generated Release APK for Distribution
-- Learned Android Deployment Workflow
-- Prepared Application for Production Release
-
-### Build Status
-
-✅ APK Generated Successfully  
-✅ Release Build Created  
-✅ Application Ready for Installation and Testing
+## Status
+✅ Task 8 Completed Successfully
