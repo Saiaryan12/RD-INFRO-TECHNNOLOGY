@@ -385,3 +385,68 @@ Implemented push notification functionality using Firebase Cloud Messaging in th
 
 ```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+## Task 8 Completed
+
+### Publish & Build APK
+
+Generated a signed release APK for deployment and distribution using Android Studio.
+
+### Features Implemented
+
+- Signed APK Generation
+- Release Build Configuration
+- Secure Keystore Creation
+- Application Packaging
+- Production-ready APK Build
+- Deployment Preparation
+
+### Steps Performed
+
+1. Opened Build → Generate Signed Bundle / APK
+2. Selected APK option
+3. Created a new keystore (.jks)
+4. Configured key alias and passwords
+5. Selected Release build variant
+6. Generated Signed APK successfully
+7. Verified APK build output
+
+### Tools Used
+
+- Android Studio
+- Kotlin
+- Gradle
+- Android SDK
+- Keystore Management
+- Git & GitHub
+
+### Output Generated
+
+- Signed Release APK
+- Release Build Variant
+- Deployment-ready Android Application
+
+### Project Features Completed
+
+- User Authentication using Firebase
+- RecyclerView News Feed
+- Retrofit API Integration
+- Profile Screen
+- Image Picker and Glide Integration
+- Firebase Cloud Messaging (FCM)
+- Push Notifications
+- Signed APK Generation
+
+### Learning Outcomes
+
+- Learned Android App Signing Process
+- Understood Keystore Creation and Management
+- Generated Release APK for Distribution
+- Learned Android Deployment Workflow
+- Prepared Application for Production Release
+
+### Build Status
+
+✅ APK Generated Successfully  
+✅ Release Build Created  
+✅ Application Ready for Installation and Testing
